@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run:  ${{ needs.detect-changes.outputs }}
+      - run:  echo ${{ needs.detect-changes.outputs }}
       # - name: Smoke test for '${{ matrix.templates }}'
       #   id: smoke_test
       #   uses: ./.github/actions/smoke-test
