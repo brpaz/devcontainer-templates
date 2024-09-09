@@ -1,5 +1,5 @@
 {
-    "id": "brpaz.nix-devenv",
+    "id": "nix-devenv",
     "version": "1.0.1",
     "name": "Nix Development Environment",
     "description": "A development environment with Nix",
