@@ -1,5 +1,5 @@
-name-template: 'nix-devenv-v$RESOLVED_VERSION'
-tag-template: 'nix-devenv-v$RESOLVED_VERSION'
+name-template: 'nix-devenv-$RESOLVED_VERSION'
+tag-template: 'nix-devenv-$RESOLVED_VERSION'
 tag-prefix: nix-devenv-v
 include-paths:
   - "src/nix-devenv"
