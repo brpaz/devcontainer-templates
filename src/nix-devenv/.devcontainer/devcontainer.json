@@ -1,0 +1,35 @@
+{
+	"name": "Nix Devenv",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"options": [
+			"--ulimit=nofile=65534:65534" // Without this, nix installation will be very very slow. See https://github.com/NixOS/nix/issues/11258
+		]
+	},
+
+	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+	 "features": {
+		"ghcr.io/devcontainers/features/docker-in-docker": {
+			"installDockerBuildx": true
+		}
+	 },
+
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// 👇 Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "",
+
+	// 👇 Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mkhl.direnv",
+				"pinage404.nix-extension-pack"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh"
+			}
+		}
+	}
+}

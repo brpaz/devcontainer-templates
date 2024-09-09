@@ -1,0 +1,69 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+[\\[devcontainer\\]](bold red) \
+$username\
+$hostname\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$shlvl\
+$kubernetes\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$kotlin\
+$nodejs\
+$perl\
+$php\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$env_var\
+$crystal\
+$cmd_duration\
+$line_break\
+$lua\
+$jobs\
+$shell\
+$character"""
+
+[aws]
+disabled = true
+[julia]
+disabled = true
+[memory_usage]
+disabled = true
+[gcloud]
+disabled = true
+[openstack]
+disabled = true
+[purescript]
+disabled = true
+[swift]
+disabled = true
+[nim]
+disabled = true
+[ocaml]
+disabled = true

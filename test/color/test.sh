@@ -4,7 +4,10 @@ source test-utils.sh
 
 # Template specific tests
 check "distro" lsb_release -c
-check "color" [ $(cat /tmp/color.txt | grep red) ]
+check "git" git --version
+check "nix" nix --version
+check "fzf" fzf --version
+check "direnv" direnv --version
 
 # Report result
 reportResults

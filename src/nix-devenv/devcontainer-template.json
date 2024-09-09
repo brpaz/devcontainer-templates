@@ -1,0 +1,18 @@
+{
+    "id": "brpaz.nix-devenv",
+    "version": "1.0.1",
+    "name": "Nix Development Environment",
+    "description": "A development environment with Nix",
+    "publisher": "Bruno Paz",
+    "keywords": [
+        "nix",
+        "development",
+        "environment"
+    ],
+    "documentationURL": "https://github.com/brpaz/devcontainers-templates/tree/main/src/nix-devenv",
+    "licenseURL": "https://github.com/brpaz/devcontainers-templates/blob/main/LICENSE",
+    "options": {},
+    "platforms": [
+        "Any"
+    ]
+}

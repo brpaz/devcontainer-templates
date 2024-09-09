@@ -1,0 +1,3 @@
+zsh-users/zsh-completions
+urbainvaes/fzf-marks
+MichaelAquilina/zsh-you-should-use
