@@ -10,6 +10,10 @@ on:
       # Only following types are handled by the action, but one can default to all as well
       types: [opened, reopened, synchronize]
 
+permissions:
+    contents: write
+    pull-requests: write
+
 jobs:
   update-release-drafter-nix-devenv:
     name: 'Nix Devenv | Draft Release'
