@@ -2,6 +2,7 @@ name: "Release Dev Container Templates & Generate Documentation"
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   deploy:
