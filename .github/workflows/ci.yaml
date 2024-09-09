@@ -21,8 +21,7 @@ jobs:
     needs: [detect-changes]
     runs-on: ubuntu-latest
     continue-on-error: true
-    if: ${{ needs.detect-changes.outputs != '[]' }}
-
+    if: ${{ join(needs.detect-changes.outputs) != '' }}
     steps:
       - uses: actions/checkout@v4
       - run:  echo ${{ needs.detect-changes.outputs }}
