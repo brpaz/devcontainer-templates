@@ -17,12 +17,11 @@ jobs:
         with:
           filters: |
             nix-devenv: ./**/nix-devenv/**
-      - run: ${{ steps.filter.outputs.changes }}
   test:
     needs: [detect-changes]
     runs-on: ubuntu-latest
     continue-on-error: true
-    if: false
+    if: ${{ needs.detect-changes.outputs != '[]' }}
     strategy:
       matrix:
         templates: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
