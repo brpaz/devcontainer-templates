@@ -1,0 +1,22 @@
+name: Release Drafter
+
+on:
+    push:
+      # branches to consider in the event; optional, defaults to all
+      branches:
+        - main
+    # pull_request event is required only for autolabeler
+    pull_request:
+      # Only following types are handled by the action, but one can default to all as well
+      types: [opened, reopened, synchronize]
+
+jobs:
+  update-release-drafter-nix-devenv:
+    name: 'Nix Devenv | Draft Release'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: release-drafter/release-drafter
+        with:
+          config-name: release-drafter-config-nix-devenv.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
