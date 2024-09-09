@@ -22,11 +22,14 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     if: ${{ join(needs.detect-changes.outputs) != '' }}
+    strategy:
+      matrix:
+        templates: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
     steps:
       - uses: actions/checkout@v4
-      - run:  echo ${{ toJSON(needs.detect-changes.outputs) }}
-      # - name: Smoke test for '${{ matrix.templates }}'
-      #   id: smoke_test
-      #   uses: ./.github/actions/smoke-test
-      #   with:
-      #     template: "${{ matrix.templates }}"
+
+      - name: Smoke test for '${{ matrix.templates }}'
+        id: smoke_test
+        uses: ./.github/actions/smoke-test
+        with:
+          template: "${{ matrix.templates }}"
