@@ -45,6 +45,6 @@ jobs:
       - name: Commit updated CHANGELOG and README files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: ${{ github.event.release.target_commitish }}
+          branch: main
           commit_message: "chore(release): [skip-ci] ${{ github.event.release.tag_name }}"
           file_pattern: CHANGELOG.md */**/README.md */**/devcontainer-template.json
