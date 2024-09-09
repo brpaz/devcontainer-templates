@@ -9,8 +9,8 @@
         "development",
         "environment"
     ],
-    "documentationURL": "https://github.com/brpaz/devcontainers-templates/tree/main/src/nix-devenv",
-    "licenseURL": "https://github.com/brpaz/devcontainers-templates/blob/main/LICENSE",
+    "documentationURL": "https://github.com/brpaz/devcontainer-templates/tree/main/src/nix-devenv",
+    "licenseURL": "https://github.com/brpaz/devcontainer-templates/blob/main/LICENSE",
     "options": {},
     "platforms": [
         "Any"
