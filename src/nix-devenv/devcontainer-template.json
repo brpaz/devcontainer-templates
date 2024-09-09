@@ -1,6 +1,6 @@
 {
     "id": "nix-devenv",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "name": "Nix Development Environment",
     "description": "A development environment with Nix",
     "publisher": "Bruno Paz",
